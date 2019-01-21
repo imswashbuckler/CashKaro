@@ -1,0 +1,130 @@
+1.Cookie and cache
+
+
+2.Server side knowledge 
+
+
+3.mobile
+-hybrid app,mobile web app and native app
+- android app - launching app,crashes,
+- clearing cache and data 
+- clearing data n killing the app
+-mobile
+ automation -appium
+
+
+4.debugging 
+- DNS problem
+-network,firewall,load
+
+
+5.framework
+-keyword driven,POM
+
+
+6. Http & Https
+-Tcp as underlined protocol
+-Http methods- get,post,put,delete
+-http responses - 500,200
+
+7.solutioning 
+
+
+8. Webservices- soap,rest
+
+
+
+1.Check the behaviour of web application by manually corrupting the cookies. Each browser stores cookie at particular location. You need close all browsers and edit the cookie file in notepad and manually change the parameters to some other values like cookie expiry date, cookie content, cookie name etc. Here you need to check if an alert message should be displayed to user and user should not be able to access other users account.
+2.Sometime by disabling cookies websites does not behave properly. Check if website functionality by disabling the cookies. 
+Sometimes the website will crash or perform weirdly. Before executing you should make sure that all browsers are closed and existing
+ cookies are deleted properly.here should not be any page crash due to disabling the cookies and user should able to access the website without crash
+ or data corruption.
+3Check the behaviour of application by deleting the cookies. First access the website and login to website using valid credentials so that site will write in cookies and then close the browser. Now manually delete the cookie file.
+
+
+Disabling cookies: Disable all cookies and attempt to use the site's major functions
+Corrupting cookies: Manually edit the cookie in notepad and change the parameters with some random values
+Cookies encryption: Sensitive information like passwords and usernames should be encrypted before it is sent to our computer
+Cookie testing with multiple browser: Check your website page is writing the cookies properly on different browser as expected
+Checking the deletion from your web application page:
+Selectively rejecting cookies: Delete all the cookies for the websites and see how the website reacts to it
+Access to cookies: Cookies written by one website should not be accessible by others
+No overuse of cookies: If the application under test is a public website, there should not be overuse of cookies
+Testing with different setting: Testing should be done properly to check that website is working well with different cookie setting
+Categorize cookies separately: Cookies should not be kept in the same category of the viruses, spam or spyware
+
+
+
+What is a Session?
+http://www.journaldev.com/1907/java-session-management-servlet-httpsession-url-rewriting
+A session refers to the entire interaction between a client and a server from the time of the client’s first request, which generally begins the session, to the time the session is terminated.
+Session simply means a particular interval of time.
+
+Session is Useful for persisting information about a client and a client’s interactions with an application.
+
+
+HTTP protocol and Web Servers are stateless, what it means is that for web server every request is 
+a new request to process and they can’t identify if it’s coming from client that has been sending request previously.
+The session could be terminated by the client’s request, or the server could automatically close it after a certain period of time.
+
+public HttpSession getSession()	Will cause one session to be created.
+
+Session sent follweing types
+
+Session Tracking Techniques
+
+There are four techniques used in Session tracking:
+
+Cookies
+Hidden Form Field
+URL Rewriting
+HttpSession
+
+
+
+Hidden Form Fields:
+A web server can send a hidden HTML form field along with a unique session ID as follows:
+
+<input type="hidden" name="sessionid" value="12345">
+URL Rewriting:
+http://tutorialspoint.com/file.htm;sessionid=12345, 
+
+The HttpSession Object:
+Apart from the above mentioned three ways, servlet provides HttpSession Interface which provides a way to identify a user across more than one page request or visit to a Web site and to store information about that user.
+The servlet container uses this interface to create a session between an HTTP client and an HTTP server. The session persists for a specified time period, across more than one connection or page request from the user.
+You would get HttpSession object by calling the public method getSession() of HttpServletRequest, as below:
+
+HttpSession session = request.getSession();
+
+Session Tracking is a way to maintain state (data) of an user.
+ It is also known as session management in servlet.
+Http protocol is a stateless so we need to maintain state
+ using session tracking techniques. Each time user requests to the server, server treats the request as the new request. So we need to maintain the state of an user to recognize to particular user.
+
+
+
+
+Does cookies store Password--
+
+HTTP vs https
+what stored in cache and cookies
+401 vs 403
+REST vs SOAP
+CACHE
+why these services are used Get POST Delete PUT
+what we can store in cookies
+Can weWrite on Property File On runtime
+
+
+
+
+Class.fornaem("com.mysql.jdbc.Driver");
+
+Connection con=Drivermanger.getconnection("databse",userid,dabase);
+Statement stmt=con.cretestament();
+Strng Query="";
+ResultSet rs=stmt.executeQuery("Query");
+
+http://www.roseindia.net/interviewquestions/servlet/session-tracking.shtml
+http://www.journaldev.com/1907/java-session-management-servlet-httpsession-url-rewriting
+https://ananddesai.wordpress.com/2008/01/14/session-and-cookies/
