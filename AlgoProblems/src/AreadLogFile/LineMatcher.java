@@ -14,8 +14,11 @@ import java.util.regex.Pattern;
 public final class LineMatcher {
 
 	public void findLines(String fileName) {
+		long s=System.currentTimeMillis();
+		System.out.println(System.currentTimeMillis());
+
 		int count = 0;
-		Pattern regexp = Pattern.compile("Ram");
+		Pattern regexp = Pattern.compile("VERIFIED");
 		Matcher matcher = regexp.matcher("");
 		Path path = Paths.get(fileName);
 		try (BufferedReader reader = Files.newBufferedReader(path, ENCODING);
@@ -31,7 +34,9 @@ public final class LineMatcher {
 					count++;
 				}
 			}
-			System.out.println(count);
+			  System.out.println("Number of instances of String: " + count);			long e=System.currentTimeMillis();
+			System.out.println(System.currentTimeMillis());
+System.out.println(e-s);
 		} catch (IOException ex) {
 			ex.printStackTrace();
 		}

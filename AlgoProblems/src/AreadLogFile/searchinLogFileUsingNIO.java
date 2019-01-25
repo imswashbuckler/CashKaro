@@ -17,16 +17,23 @@ public class searchinLogFileUsingNIO {
 
 	public static void searchtextInfile(String path)
 	{
+		long s=System.currentTimeMillis();
+		System.out.println(System.currentTimeMillis());
 		File file = new File(path);
 		try {
 		    int count = 0;
 		    Scanner scanner = new Scanner(file);
 		    while(scanner.hasNextLine()) {
-		        if(scanner.nextLine().contains("ORDER_UNDER_PROCESS_COD")) {
+		        if(scanner.nextLine().contains("VERIFIED")) {
 		            count++;
-		            System.out.println("Number of instances of String: " + count);
+		          //  System.out.println("Number of instances of String: " + count);
 		        }
 		    }
+		    System.out.println("Number of instances of String: " + count);
+			long e=System.currentTimeMillis();
+			System.out.println(System.currentTimeMillis());
+			System.out.println(e-s);
+
 		} catch (FileNotFoundException e){
 		    System.out.println(e);
 		}
@@ -43,9 +50,9 @@ public class searchinLogFileUsingNIO {
 	}
 	
 	public static void main(String[] args) throws IOException {
-		//searchtextInfile("D://log1.log");
+		searchtextInfile("D://log1.log");
 		// searchtextInfile1("D://Ram.txt");
-	    String stringToSearch = "Four score and seven years ago our fathers ...";
+	   /* String stringToSearch = "Four score and seven years ago our fathers ...";
 
 	  //  Pattern p = Pattern.compile("[java]+");   // the pattern to search for
 	   // Matcher m = p.matcher(stringToSearch);
@@ -55,10 +62,10 @@ public class searchinLogFileUsingNIO {
 	    Matcher m = p.matcher(stringToSearch);
 	        Path path = Paths.get("D://log1.log");
 
-	        String report = searchFor("\java\", path);
+	        String report = searchFor("VERIFIED", path);
 
 	        System.out.println(report);
-
+*/
 	    }
 
 	    private static final int MAPSIZE = 4 * 200 ; // 4K - make this * 1024 to 4MB in a real system.
