@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="CashKaroAssignment" preserve-order="true">
+	<listeners>
+	</listeners>
+<!-- 	<parameter name="Browser" value="chrome" /> -->
+		<parameter name="url" value="http://cashkaro.iamsavings.co.uk/" />
+
+		
+	<test name="Cash">
+			<classes>
+					<class name="Test.TestcLass">
+					        <methods>
+       			 <include name="SignINTestNormally"/>
+       		  <include name="SignINTestViaFB" />
+                 <include name="ForgotPassword" />
+
+      </methods>
+					
+			</class>
+			
+			</classes>
+	</test>
+</suite> 

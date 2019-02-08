@@ -3,7 +3,7 @@ package concepts;
 public  class staticvar {
 	
 	public static int a = 5;
-	public int b = 10;
+	public int b = 10; 
 	
 	
 public static void teststatic()
@@ -24,15 +24,13 @@ public static void main(String[] args)
 	t1.a = 1;
 	t2.a=7;
 	t1.b=5;
-	System.out.println(t1.a);
+	System.out.println("a:  "+t1.a);
 	System.out.println(t2.a);
 	System.out.println(t1.b);
 	System.out.println(t2.b);
-	
-	
-	   String s="Sachin Tendulkar";  
-	   System.out.println(s.substring(6));//Tendulkar  
-	   System.out.println(s.substring(1,4));//Sachin  
+	String s="Sachin Tendulkar";  
+	System.out.println(s.substring(6));//Tendulkar  
+	System.out.println(s.substring(1,4));//Sachin  
 
 }
 }

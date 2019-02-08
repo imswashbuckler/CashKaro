@@ -1,6 +1,8 @@
 package concepts;
 
-public class Serialization implements java.io.Serializable {
+import java.io.Serializable;
+
+public class Serialization implements Serializable {
 	   public String name;
 	   public String address;
 	   public transient int SSN;

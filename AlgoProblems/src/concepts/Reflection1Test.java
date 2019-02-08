@@ -16,9 +16,12 @@ public static void main(String[] args) {
 	System.out.println("Classname: "+classname + "\n");
 	int classmodifier =reflectclass.getModifiers();
 	System.out.println("Modifeir : " + Modifier.isPublic(classmodifier) + "\n");
-	Class[] interfaces = reflectclass.getInterfaces();
+	// Interfa[] interfaces = reflectclass.getInterfaces();
+	Class clazz = Reflection1.class.getClass();
+	clazz.getInterfaces();
+
 	
-	for (Class if1:interfaces )
+	for (Class if1:clazz.getInterfaces() )
 	{
 		System.out.println("Inteface name" + if1.getName());
 		

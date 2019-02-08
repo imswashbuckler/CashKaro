@@ -5,12 +5,12 @@ class Testclass {
 	Testclass()
 	{
 		
-		System.out.println("Testclass");
+		System.out.println("constructor of Testclass");
 	}
 
 	public void print() {
-		System.out.println("print from TestClass: ");
-		System.out.print(data);
+		System.out.println("print from TestClass: "+data);
+
 
 	}
 
@@ -24,13 +24,12 @@ class S extends Testclass {
 
 	S()
 	{
-		System.out.println("S class");
+		System.out.println("constructor of S class");
 		
 	}
 	public void print() {
-		System.out.print("print from S: ");
-		System.out.println(data);
-	}
+		System.out.println("print from S: "+data);
+			}
 
 }
 
@@ -45,8 +44,8 @@ public class __CallingFuntion {
 		
 		System.out.println(obj1.data);
 		
-		Integer i1=500;
-		Integer i2=500;
+		Integer i1=1;
+		Integer i2=1;
 		System.out.println("Integer:");
 		System.out.println(i1.equals(i2));
 		System.out.println(i1==i2);

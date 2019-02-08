@@ -39,7 +39,7 @@ public class searchinLogFileUsingNIO {
 		}
 
 	}
-	public static void searchtextInfile1(String path) throws IOException
+	/*public static void searchtextInfile1(String path) throws IOException
 	{
 		  long count = Files.lines(Paths.get("D://log1.log"))
 				     .filter(s -> s.contains("Exception"))
@@ -48,7 +48,7 @@ public class searchinLogFileUsingNIO {
 				
 
 	}
-	
+	*/
 	public static void main(String[] args) throws IOException {
 		searchtextInfile("D://log1.log");
 		// searchtextInfile1("D://Ram.txt");

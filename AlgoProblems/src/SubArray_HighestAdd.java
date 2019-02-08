@@ -17,6 +17,7 @@ public class SubArray_HighestAdd {
 			
 			
 		}
+		return max;
 		
 		/*
 		for (int i = 0; i < size; i++) {

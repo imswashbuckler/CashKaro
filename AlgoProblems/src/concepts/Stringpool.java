@@ -11,6 +11,13 @@ public class Stringpool {
 		s1="dog";
 		System.out.println(s1.hashCode());
 		System.out.println(s2.hashCode());
+		
+		int i=200;
+		int k=200;
+
+		Integer l1=20;
+		Integer l2=20;
+				System.out.println(l1==l2);
 
 }
 }

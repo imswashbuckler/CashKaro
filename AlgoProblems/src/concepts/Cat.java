@@ -5,7 +5,6 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Random;
 
-import com.gargoylesoftware.htmlunit.javascript.host.file.FileReader;
 
 public class Cat extends Animal {
 

@@ -15,10 +15,7 @@ public class PrivateMethodAccess
 		      //  m.invoke(d);// throws java.lang.IllegalAccessException
 		        f.setAccessible(true);
 		        m.setAccessible(true);// Abracadabra 
-		        
 		       // m.invoke(d);// now its OK
-		      
-		        
 		        System.out.println(f.getInt(d));
 		        
 		    }
